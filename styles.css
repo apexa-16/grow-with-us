@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    nav .logo h1 {
+        color: #fff;
+        font-size: 24px;
+    }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+    .nav-links li {
+        margin: 0 15px;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+}
+
+.hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+    .hero h2 {
+        font-size: 36px;
+        color: #333;
+    }
+
+    .hero p {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .hero .btn {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+.services {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+    .services h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+.service-card {
+    background-color: #e9ecef;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+}
+
+    .service-card h3 {
+        font-size: 24px;
+        color: #333;
+    }
+
+    .service-card p {
+        color: #555;
+    }
+
+.cta {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+    .cta h2 {
+        font-size: 30px;
+    }
+
+    .cta p {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .cta .btn {
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .cta h2 {
+        font-size: 24px;
+    }
+
+    .cta p {
+        font-size: 18px;
+    }
+}
