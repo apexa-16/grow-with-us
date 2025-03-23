@@ -16,11 +16,9 @@
                 <h1>Grow With Us</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#con">Contact Us</a></li>
             </ul>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span>&#9776;</span>
@@ -28,39 +26,71 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero-content">
             <h2>Welcome to Grow With Us</h2>
             <p>Your trusted partner in business growth, startup success, and market expansion.</p>
-            <a href="#services" class="btn">Get Started</a>
+            <a href="#register-form" class="btn" onclick="openModal()">Get Started</a>
         </div>
     </section>
 
     <section class="services" id="services">
         <h2>Our Services</h2>
-        <div class="service-card">
-            <h3>Business Idea Support</h3>
-            <p>We help you transform your business ideas into tangible, scalable ventures.</p>
+        <div class="card-container">
+            <div class="service-card">
+                <h3>Business Idea Support</h3>
+                <p>We help you transform your business ideas into tangible, scalable ventures.</p>
+            </div>
+            <div class="service-card">
+                <h3>Resources & Equipment</h3>
+                <p>Access necessary machinery, technology, and tools to power your business.</p>
+            </div>
+            <div class="service-card">
+                <h3>Market Research</h3>
+                <p>Identify profitable markets and business locations for expansion.</p>
+            </div>
+            <div class="service-card">
+                <h3>Marketing & Branding</h3>
+                <p>Develop effective marketing strategies to help your business grow.</p>
+            </div>
         </div>
-        <div class="service-card">
-            <h3>Resources & Equipment</h3>
-            <p>Access necessary machinery, technology, and tools to power your business.</p>
-        </div>
-        <div class="service-card">
-            <h3>Market Research</h3>
-            <p>Identify profitable markets and business locations for expansion.</p>
-        </div>
-        <div class="service-card">
-            <h3>Marketing & Branding</h3>
-            <p>Develop effective marketing strategies to help your business grow.</p>
-        </div>
+        
     </section>
 
-    <section class="cta">
+    <section class="cta" id="con">
         <h2>Let's Grow Together</h2>
         <p>Start your business journey with us today. We're here to help!</p>
         <a href="#contact" class="btn">Contact Us</a>
     </section>
+
+    <!-- Registration Modal -->
+    <div class="modal" id="register-form">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Business Registration Form</h2>
+            <form id="registration-form">
+                <label for="business-name">Business Name:</label>
+                <input type="text" id="business-name" name="business-name" required>
+
+                <label for="business-description">Business Description:</label>
+                <textarea id="business-description" name="business-description" rows="4" required></textarea>
+
+                <label for="owner-name">Owner's Name:</label>
+                <input type="text" id="owner-name" name="owner-name" required>
+
+                <label for="contact-email">Contact Email:</label>
+                <input type="email" id="contact-email" name="contact-email" required>
+
+                <label for="business-location">Business Location:</label>
+                <input type="text" id="business-location" name="business-location" required>
+
+                <label for="additional-info">Additional Information:</label>
+                <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2025 Grow With Us. All rights reserved.</p>
