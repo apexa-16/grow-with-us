@@ -54,7 +54,7 @@
                 <p>Develop effective marketing strategies to help your business grow.</p>
             </div>
         </div>
-        
+
     </section>
 
     <section class="cta" id="con">
@@ -67,30 +67,64 @@
     <div class="modal" id="register-form">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h2>Business Registration Form</h2>
-            <form id="registration-form">
-                <label for="business-name">Business Name:</label>
-                <input type="text" id="business-name" name="business-name" required>
+            
+            <div id="form-typ">
+                <h2>Choose Your Registration Type</h2>
+                <button class="btn" onclick="showBusinessForm()">Business</button>
+                <button class="btn" onclick="showEmployeeForm()">Employee</button>
+            </div>
 
-                <label for="business-description">Business Description:</label>
-                <textarea id="business-description" name="business-description" rows="4" required></textarea>
+            <!-- Business Registration Form -->
+            <div id="business-form" style="display: none;">
+                <h3>Business Registration Form</h3>
+                <form id="business-registration-form">
+                    <label for="business-name">Business Name:</label>
+                    <input type="text" id="business-name" name="business-name" required>
 
-                <label for="owner-name">Owner's Name:</label>
-                <input type="text" id="owner-name" name="owner-name" required>
+                    <label for="business-description">Business Description:</label>
+                    <textarea id="business-description" name="business-description" rows="4" required></textarea>
 
-                <label for="contact-email">Contact Email:</label>
-                <input type="email" id="contact-email" name="contact-email" required>
+                    <label for="owner-name">Owner's Name:</label>
+                    <input type="text" id="owner-name" name="owner-name" required>
 
-                <label for="business-location">Business Location:</label>
-                <input type="text" id="business-location" name="business-location" required>
+                    <label for="contact-email">Contact Email:</label>
+                    <input type="email" id="contact-email" name="contact-email" required>
 
-                <label for="additional-info">Additional Information:</label>
-                <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+                    <label for="business-location">Business Location:</label>
+                    <input type="text" id="business-location" name="business-location" required>
 
-                <button type="submit" class="btn">Submit</button>
-            </form>
+                    <label for="additional-info">Additional Information:</label>
+                    <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+
+            <!-- Employee Registration Form -->
+            <div id="employee-form" style="display: none;">
+                <h3>Employee Registration Form</h3>
+                <form id="employee-registration-form">
+                    <label for="employee-name">Full Name:</label>
+                    <input type="text" id="employee-name" name="employee-name" required>
+
+                    <label for="employee-profession">Profession/Job Title:</label>
+                    <input type="text" id="employee-profession" name="employee-profession" required>
+
+                    <label for="years-experience">Years of Experience:</label>
+                    <input type="number" id="years-experience" name="years-experience" required>
+
+                    <label for="skills">Skills:</label>
+                    <textarea id="skills" name="skills" rows="4" required></textarea>
+
+                    <label for="contact-email">Contact Email:</label>
+                    <input type="email" id="contact-email" name="contact-email" required>
+
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
+
 
     <footer>
         <p>&copy; 2025 Grow With Us. All rights reserved.</p>
